@@ -1,0 +1,117 @@
+.hero__image {
+    animation: profile__animate 8s ease-in-out infinite 1s;
+    animation-delay: 0s;
+    /* box-shadow: 0 0 0 9px rgb(255 255 255 / 30%); */
+}
+
+.hero__ring {
+    animation: profile__animate 8s ease-in-out infinite 1s;
+    animation-delay: 0s
+}
+
+@keyframes profile__animate {
+    0% {
+        border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+    }
+
+    50% {
+        border-radius: 30% 60% 70% 40%/50% 60% 30% 60%;
+    }
+
+    100% {
+        border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+    }
+}
+
+.cursor {
+    /* background-color: var(--secondary-color); */
+    background-color: transparent;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 99999;
+    border-style: solid;
+    border-width: 1px;
+}
+
+.Typewriter__cursor{
+    color: var(--secondary-color);
+}
+
+.splide__arrow svg {
+    fill: var(--secondary-color) !important;
+}
+
+.splide__pagination__page {
+    background: var(--gray-color) !important;
+}
+
+.splide__pagination__page.is-active {
+    background: var(--secondary-color) !important;
+}
+
+.social-svg:hover > .social-svg-icon{
+    fill: var(--secondary-color) !important
+}
+
+@media (max-width: 1024px) {
+    .cursor {
+        display: none;
+    }
+}
+
+@media (max-width: 850px) {
+    .splide__arrow {
+        display: none !important;
+    }
+}
+
+@media (max-width: 430px) {
+    .about__image {
+        width: 150px;
+        height: 150px;
+    }
+
+    .about__image__div {
+        width: 150px;
+        height: 150px;
+    }
+
+    .about__subheading {
+        font-size: 1.25rem;
+        line-height: 1.75rem;
+    }
+}
+
+@media (max-width: 360px) {
+    .about__image {
+        width: 100px;
+        height: 100px;
+    }
+
+    .about__image__div {
+        width: 100px;
+        height: 100px;
+    }
+
+    .about__subheading {
+        font-size: 1.25rem;
+        line-height: 1.75rem;
+    }
+}
+
+@media (max-width: 305px) {
+
+    .about__image {
+        display: none;
+    }
+
+    .about__subheading {
+        font-size: 1.25rem;
+        line-height: 1.75rem;
+    }
+}
