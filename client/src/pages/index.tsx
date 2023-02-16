@@ -185,9 +185,9 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
   const projects: Project[] = await fetchProjects();
   const socials: Social[] = await fetchSocials();
 
-  if (!about) {
-    throw new Error('About data is undefined');
-  }
+  // if (!about || !experiences || !skills || !projects || !socials) {
+  //   throw new Error('data is undefined');
+  // }
 
   return {
     props: {

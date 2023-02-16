@@ -25,6 +25,7 @@ export default function AboutContainer({ about, textLeave, linkEnter, imgHover, 
             <h3 className='absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl'>About</h3>
 
             <div className="-mb-[8rem] md:mb-0 mt-5 sm:mt-3 md:mt-0 flex-shrink-0 w-[170px] h-[170px] rounded-full object-cover md:rounded-lg md:w-64 md:h-95 xl:w-[500px] xl:h-[600px] about__image__div">
+                {about[0]?.profilePic && (
                 <motion.img
                     initial={{
                         x: -200,
@@ -40,7 +41,7 @@ export default function AboutContainer({ about, textLeave, linkEnter, imgHover, 
                     viewport={{
                         once: true,
                     }}
-                    src={urlFor(about[0].profilePic).url()}  
+                    src={urlFor(about[0]?.profilePic).url()}  
                     alt="Again Me :)"
                     data-hover="I know I'm camera-shy, but if you keep staring, I might just develop a permanent pose! 😐"
                     onMouseEnter={imgHover} 
@@ -48,6 +49,7 @@ export default function AboutContainer({ about, textLeave, linkEnter, imgHover, 
                     // Todo: created the xs responsive handle now make the about section responsive
                     className="-mb-20 md:mb-0 flex-shrink-0 w-[170px] h-[170px] rounded-full object-cover md:rounded-lg md:w-64 md:h-95 xl:w-[500px] xl:h-[600px] about__image"
                 />
+                )}
             </div>
             <div className="mt-7 sm:mt-0 space-y-5 sm:space-y-10 px-0 md:px-10 inline-flex flex-col items-center md:inline-block">
                 <h4 className="text-2xl sm:text-3xl md:text-4xl font-semibold about__subheading">Here is a {" "}
@@ -63,7 +65,7 @@ export default function AboutContainer({ about, textLeave, linkEnter, imgHover, 
                     I am confident that my skills, experience, and interest align with the demands of the industry and I am excited to take on new challenges and to continue learning and growing in my career.
                 </p> */}
                 <p className="text-xs sm:text-sm lg:text-base">
-                    {about[0].description.map((para: string, _id: any) => (
+                    {about[0]?.description?.map((para: string, _id: any) => (
                         <span key={_id}>
                             {para}
                             <br />

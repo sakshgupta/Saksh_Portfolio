@@ -35,7 +35,7 @@ The folder is structured as follows:
 * `src/styles/` contains global styles and tailwind configuration.
 * `src/utils/` contains various utility functions and modules that can be used throughout the application.
 
-## Credits
+## Technologies Used
 
 * [Next.js](https://nextjs.org/)
 * [React.js](https://reactjs.org/)

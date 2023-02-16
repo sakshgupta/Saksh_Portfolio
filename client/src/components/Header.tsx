@@ -53,8 +53,8 @@ export default function Header({ socials, textLeave, linkEnter, imgHover, imgHov
             className = "flex flex-row items-center">
                 {/* Social Icons */}
                 {socials
-                    .sort((a, b) => a.order > b.order ? 1 : -1)
-                    .map((social) => (
+                    ?.sort((a, b) => a.order > b.order ? 1 : -1)
+                    ?.map((social) => (
                         <SocialIcon 
                             url={social.url}
                             onMouseEnter={linkEnter} 

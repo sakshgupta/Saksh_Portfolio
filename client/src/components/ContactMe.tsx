@@ -1,7 +1,7 @@
 // import { EnvelopeIcon, MapPinIcon, PhoneIcon } from "@heroicons/react/24/solid";
 import React from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
-import { CiMail, CiPhone, CiLocationArrow1 } from "react-icons/ci";
+import { CiMail } from "react-icons/ci";
 
 
 type Inputs = {
@@ -24,7 +24,7 @@ export default function ContactMe({ textLeave, linkEnter, imgHover, imgHoverLeav
 
     // when we submit the form what to do with form data is within onSubmit
     const onSubmit: SubmitHandler<Inputs> = (formData) => {
-        const link = `mailto:sakshamjerry.dev@gmail.com?subject=${formData.subject}&body=Sending greetings from ${formData.name}, the bringer of good news!%0D%0AMy message: ${formData.message}.%0D%0A%0D%0AShould you require further communication, you can reach me at ${formData.email}.`;
+        const link = `mailto:sakshamgupta.dev@gmail.com?subject=${formData.subject}&body=Sending greetings from ${formData.name}, the bringer of good news!%0D%0AMy message: ${formData.message}.%0D%0A%0D%0AShould you require further communication, you can reach me at ${formData.email}.`;
         window.open(link, "_blank");
     };
 

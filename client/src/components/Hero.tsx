@@ -19,20 +19,22 @@ export default function Hero({ about, textEnter, textLeave, linkEnter, imgHover,
     return (
         <div className='h-screen flex flex-col space-y-8 items-center justify-center text-center overflow-hidden'>
             <BackgroundCircles />
-            <Image
-                // src="https://i.postimg.cc/4d1rf88Y/resume-photo.png" 
-                src={urlFor(about[0].heroimgUrl).url()}
-                height={500}
-                width={500}
-                priority={true}
-                alt="Me :)"
-                data-hover="I may be just a picture, but don't hover too long or I'll start to pixelate! 🔍 "
-                onMouseEnter={imgHover}
-                onMouseLeave={imgHoverLeave}
-                className="relative rounded-full h-32 w-32 mx-auto object-cover hero__image"
-            />
+            {about[0]?.heroimgUrl && (
+                <Image
+                    // src="https://i.postimg.cc/4d1rf88Y/resume-photo.png" 
+                    src={urlFor(about[0]?.heroimgUrl).url()}
+                    height={500}
+                    width={500}
+                    priority={true}
+                    alt="Me :)"
+                    data-hover="I may be just a picture, but don't hover too long or I'll start to pixelate! 🔍 "
+                    onMouseEnter={imgHover}
+                    onMouseLeave={imgHoverLeave}
+                    className="relative rounded-full h-32 w-32 mx-auto object-cover hero__image"
+                />
+            )}
             <div className='z-20'>
-                <h2 className="text-xs sm:text-sm uppercase text-gray-500 pb-2 tracking-[15px]">{about[0].title}</h2>
+                <h2 className="text-xs sm:text-sm uppercase text-gray-500 pb-2 tracking-[15px]">{about[0]?.title}</h2>
                 <h1
                     onMouseEnter={textEnter}
                     onMouseLeave={textLeave}

@@ -1,12 +1,6 @@
-
 # Sanity Backend (Server)
 
 This folder houses the magical incantations that power the backend of my personal portfolio website. It's where Sanity.io works its sorcery to serve up the dynamic content for your viewing pleasure!
-
-## Technologies Used
-
-* Sanity.io
-* TypeScript
 
 ## Installation
 
@@ -31,6 +25,11 @@ This command will start the server and make it available at [http://localhost:33
 The folder is structured as follows:
 
 * `schemas/` contains the Sanity.io schema files for the website's content.
+
+## Technologies Used
+
+* Sanity.io
+* TypeScript
 
 ## Contributing
 
