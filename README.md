@@ -2,8 +2,6 @@
 
 Introducing my spectacular personal portfolio website! Built with Next.js, React.js, Tailwind CSS, and Sanity.io - it showcases my mad skills, experience, and cool projects. With a clean and modern design, it's easier to navigate than a duck in water.
 
-This website has taken flight and is soaring through the clouds on [Vercel](https://sakshgupta-sakshgupta.vercel.app/)! 🚀
-
 ## Features
 
 - Clean and modern design
@@ -36,3 +34,6 @@ This project is licensed under the [MIT License](https://opensource.org/licenses
 ## Credits
 
 * Developed by [Saksham Gupta](https://www.linkedin.com/in/sakshguptavit/ "Linkedin")
+
+## Deployment
+This website has taken flight and is soaring through the clouds on Vercel [https://sakshgupta.vercel.app/](https://sakshgupta.vercel.app/)! 🚀
