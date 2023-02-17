@@ -29,7 +29,7 @@ export default function Header({ socials, textLeave, linkEnter, imgHover, imgHov
                 transition={{
                     duration: 1.5
                 }}
-                data-hover = "cool logo right? 😎"
+                data-hover = "Built with ❤️, ☕, and a pinch of 🪄 by Saksham Gupta."
                 onMouseEnter={imgHover} 
                 onMouseLeave={imgHoverLeave}
                 className='flex flex-row items-center text-[#f26c4f] text-4xl cursor-pointer '>

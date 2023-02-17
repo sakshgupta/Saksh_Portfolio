@@ -19,7 +19,7 @@ export default function Projects({ projects }: Props) {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 1.5 }}
-            className="h-screen flex relative overflow-hidden flex-col text-left md:flex-row max-w-full px-10 justify-evenly mx-auto items-center">
+            className="h-screen flex relative overflow-hidden flex-col text-left md:flex-row max-w-full px-10 justify-evenly mx-auto items-center project_section">
             <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl">
                 Projects
             </h3>
@@ -34,15 +34,14 @@ export default function Projects({ projects }: Props) {
                         .sort((a, b) => a.order > b.order ? 1 : -1)
                         .map(project => (
                             // project__section
-                            // Todo: Make it responsive
                             <SplideSlide key={project._id}>
-                                <div className='grid md:grid-cols-2 grid-cols-1 gap-4 space-y-5 p-5 md:p-20 h-screen'>
+                                <div className='grid md:grid-cols-2 grid-cols-1 gap-4 space-y-5 p-5 md:p-20 h-screen cursor-move'>
                                     <div className='flex justify-center mt-3 items-end md:items-center'>
                                         <a target="_blank" rel="noreferrer" href={project.projectLink}>
                                             <Image
                                                 src={urlFor(project.imgUrl).url()}
                                                 // src='/homepage.png'
-                                                className="w-screen lg:w-[92%] border-2 rounded-lg"
+                                                className="w-screen lg:w-[92%] border-2 rounded-lg project__image"
                                                 alt="Project Images"
                                                 height={5000}
                                                 width={5000}
@@ -50,11 +49,11 @@ export default function Projects({ projects }: Props) {
                                             />
                                         </a>
                                     </div>
-                                    <div className='flex flex-col justify-start md:justify-center align-middle max-w-[45rem]'>
+                                    <div className='flex flex-col justify-start md:justify-center align-middle max-w-[45rem] project__description'>
                                         <h1 className='text-2xl sm:text-3xl md:text-4xl font-medium text-[#f26c4f]'>{project.title}</h1>
                                         <p className='mt-4 text-sm sm:text-md md:text-lg'>{project.description}</p>
 
-                                        <ul className='mt-8 text-sm flex flex-row flex-wrap	gap-y-3 gap-x-5 text-[#D0CCCA]'>
+                                        <ul className='mt-8 text-sm flex flex-row flex-wrap gap-y-1	sm:gap-y-3 gap-x-1 sm:gap-x-5 text-[#D0CCCA]'>
                                             {project.tags?.map((tag: any) => (
                                                 <li className='border-2 border-[#D0CCCA] rounded-xl p-1' key={tag}>
                                                     {tag}

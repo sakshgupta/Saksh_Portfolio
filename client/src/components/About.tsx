@@ -46,15 +46,27 @@ export default function AboutContainer({ about, textLeave, linkEnter, imgHover, 
                     data-hover="I know I'm camera-shy, but if you keep staring, I might just develop a permanent pose! 😐"
                     onMouseEnter={imgHover} 
                     onMouseLeave={imgHoverLeave}
-                    // Todo: created the xs responsive handle now make the about section responsive
                     className="-mb-20 md:mb-0 flex-shrink-0 w-[170px] h-[170px] rounded-full object-cover md:rounded-lg md:w-64 md:h-95 xl:w-[500px] xl:h-[600px] about__image"
                 />
                 )}
             </div>
             <div className="mt-7 sm:mt-0 space-y-5 sm:space-y-10 px-0 md:px-10 inline-flex flex-col items-center md:inline-block">
-                <h4 className="text-2xl sm:text-3xl md:text-4xl font-semibold about__subheading">Here is a {" "}
-                    <span className="underline decoration-[#f26c4f]">little</span>
-                    {" "}background</h4>
+                <div className="flex flex-row justify-center items-center gap-2 about__small__image_div">
+                {about[0]?.profilePic && (
+                    <img
+                        src={urlFor(about[0]?.profilePic).url()}  
+                        alt="Again Me :)"
+                        data-hover="I know I'm camera-shy, but if you keep staring, I might just develop a permanent pose! 😐"
+                        onMouseEnter={imgHover} 
+                        onMouseLeave={imgHoverLeave}
+                        className="flex-shrink-0 w-[50px] h-[50px] rounded-full object-cover about__small_image"
+                    />
+                    )}
+                    <h4 className="text-2xl sm:text-3xl md:text-4xl font-semibold about__subheading">Here is a {" "}
+                        <span className="underline decoration-[#f26c4f]">little</span>
+                        {" "}background
+                    </h4>
+                </div>
                 {/* <p className="text-base">
                     As a pre-final year CSE student at VIT Bhopal, I am a problem-solver at heart and an introvert by nature. I possess a strong aptitude for analytical and logical thinking, which I have honed through my studies and projects. 
                     <br/>

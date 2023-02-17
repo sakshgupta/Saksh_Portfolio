@@ -27,7 +27,7 @@ export default function Hero({ about, textEnter, textLeave, linkEnter, imgHover,
                     width={500}
                     priority={true}
                     alt="Me :)"
-                    data-hover="I may be just a picture, but don't hover too long or I'll start to pixelate! 🔍 "
+                    data-hover="Don't look too closely, or you might get lost in the intricate details. 🕸️ "
                     onMouseEnter={imgHover}
                     onMouseLeave={imgHoverLeave}
                     className="relative rounded-full h-32 w-32 mx-auto object-cover hero__image"
