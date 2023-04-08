@@ -140,6 +140,6 @@
         padding-right: 0rem;
     }
     .project__image{
-        width: 60vw;
+        display:none !important;
     }
 }
