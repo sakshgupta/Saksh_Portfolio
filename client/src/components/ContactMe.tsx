@@ -24,7 +24,7 @@ export default function ContactMe({ textLeave, linkEnter, imgHover, imgHoverLeav
 
     // when we submit the form what to do with form data is within onSubmit
     const onSubmit: SubmitHandler<Inputs> = (formData) => {
-        const link = `mailto:sakshamgupta.dev@gmail.com?subject=${formData.subject}&body=Sending greetings from ${formData.name}, the bringer of good news!%0D%0AMy message: ${formData.message}.%0D%0A%0D%0AShould you require further communication, you can reach me at ${formData.email}.`;
+        const link = `mailto:sakshamgupta.dev@gmail.com?subject=${formData.subject}&body=Sending greetings from ${formData.name},%0D%0AMy message: ${formData.message}.%0D%0A%0D%0AShould you require further communication, you can reach me at ${formData.email}.`;
         window.open(link, "_blank");
     };
 
