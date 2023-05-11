@@ -129,7 +129,7 @@ export default function Home({ about, experiences, skills, projects, socials }: 
   };
 
   return (
-    <div className="bg-[#242424] text-white h-screen snap-y overflow-y-scroll overflow-x-hidden z-0 scrollbar scrollbar-thin scrollbar-track-[#222222] scrollbar-thumb-[#f26c4f]">
+    <div className="bg-[#242424] text-white h-screen overflow-y-scroll overflow-x-hidden z-0 scrollbar scrollbar-thin scrollbar-track-[#222222] scrollbar-thumb-[#f26c4f]">
       <Head>
         <title>Saksham Gupta</title>
       </Head>

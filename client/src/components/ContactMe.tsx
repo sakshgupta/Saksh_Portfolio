@@ -31,9 +31,9 @@ export default function ContactMe({ textLeave, linkEnter, imgHover, imgHoverLeav
 
     return (
         <div className="h-screen flex relative flex-col text-center md:text-left md:flex-row max-w-7xl px-10 justify-evenly mx-auto items-center contact_section">
-            <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl">
+            {/* <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl">
                 Contact
-            </h3>
+            </h3> */}
 
             <div className="flex flex-col space-y-10 lg:space-y-0 lg:flex-row gap-x-20">
                 <div className="max-w-[500px]">
