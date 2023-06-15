@@ -138,4 +138,14 @@
         padding-left: 0rem;
         padding-right: 0rem;
     }
+    .skill_section_title {
+        display: none;
+    }
+}
+
+@media (max-height: 600px) {
+    .contact_section_topheading,
+    .project_section_bottomtags {
+        display: none;
+    }
 }

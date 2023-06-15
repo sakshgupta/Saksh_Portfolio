@@ -36,22 +36,32 @@ export default function ContactMe({ textLeave, linkEnter, imgHover, imgHoverLeav
             </h3> */}
 
             <div className="flex flex-col space-y-10 lg:space-y-0 lg:flex-row gap-x-20">
-                <div className="max-w-[500px]">
+                <div className="max-w-[500px] contact_section_topheading">
                     <h4 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-center md:text-left">
                         I have got just what you need.{" "}
-                        <p className="decoration-[#f26c4f] underline">Lets Talk.</p>
+                        <p className="decoration-[#f26c4f] underline">
+                            Lets Talk.
+                        </p>
                     </h4>
 
                     <div className="mt-10">
-                        <div 
-                            onClick={()=>{navigator.clipboard.writeText("sakshamgupta.dev@gmail.com");}}
-                            className="flex items-center space-x-3 sm:space-x-5 cursor-pointer justify-center md:justify-start">
+                        <div
+                            onClick={() => {
+                                navigator.clipboard.writeText(
+                                    "sakshamgupta.dev@gmail.com"
+                                );
+                            }}
+                            className="flex items-center space-x-3 sm:space-x-5 cursor-pointer justify-center md:justify-start"
+                        >
                             <CiMail className="text-[#f26c4f] h-5 w-5 lg:h-7 lg:w-7 animate-pulse" />
-                            <p 
-                            data-hover="Just click on me and the email address will be yours. 📧 " 
-                            onMouseEnter={imgHover} 
-                            onMouseLeave={imgHoverLeave}
-                            className="text-lg sm:text-xl lg:text-2xl">sakshamgupta.dev@gmail.com</p>
+                            <p
+                                data-hover="Just click on me and the email address will be yours. 📧 "
+                                onMouseEnter={imgHover}
+                                onMouseLeave={imgHoverLeave}
+                                className="text-lg sm:text-xl lg:text-2xl"
+                            >
+                                sakshamgupta.dev@gmail.com
+                            </p>
                         </div>
                     </div>
                 </div>
