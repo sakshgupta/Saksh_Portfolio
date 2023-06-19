@@ -52,7 +52,7 @@ export default function Hero({
                     <Typewriter
                         options={{
                             strings: [
-                                "*[_theName == “Saksham Gupta”]",
+                                "Hey there, I'm Saksham Gupta",
                                 "Guy-who-loves-Coffee.tsx",
                                 "{ButLovesToCodeMore}",
                             ],
@@ -86,6 +86,13 @@ export default function Hero({
                         onMouseLeave={textLeave}
                     >
                         <button className="heroButton">Projects</button>
+                    </Link>
+                    <Link
+                        href="#contact"
+                        onMouseEnter={linkEnter}
+                        onMouseLeave={textLeave}
+                    >
+                        <button className="heroButton">Contact</button>
                     </Link>
                 </div>
             </div>

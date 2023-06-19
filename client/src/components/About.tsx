@@ -21,50 +21,55 @@ export default function AboutContainer({ about, textLeave, linkEnter, imgHover, 
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 1.5 }}
-            className='flex flex-col relative h-screen text-center md:text-left md:flex-row max-w-7xl px-3 sm:px-10 justify-evenly mx-auto items-center'>
+            className="flex flex-col relative h-screen text-center md:text-left md:flex-row max-w-7xl px-3 sm:px-10 justify-evenly mx-auto items-center"
+        >
             {/* <h3 className='absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl'>About</h3> */}
 
             <div className="-mb-[8rem] md:mb-0 mt-5 sm:mt-3 md:mt-0 flex-shrink-0 w-[170px] h-[170px] rounded-full object-cover md:rounded-lg md:w-64 md:h-95 xl:w-[500px] xl:h-[600px] about__image__div">
                 {about[0]?.profilePic && (
-                <motion.img
-                    initial={{
-                        x: -200,
-                        opacity: 0,
-                    }}
-                    transition={{
-                        duration: 1.2,
-                    }}
-                    whileInView={{
-                        x: 0,
-                        opacity: 1,
-                    }}
-                    viewport={{
-                        once: true,
-                    }}
-                    src={urlFor(about[0]?.profilePic).url()}  
-                    alt="Again Me :)"
-                    data-hover="I know I'm camera-shy, but if you keep staring, I might just develop a permanent pose! 😐"
-                    onMouseEnter={imgHover} 
-                    onMouseLeave={imgHoverLeave}
-                    className="-mb-20 md:mb-0 flex-shrink-0 w-[170px] h-[170px] rounded-full object-cover md:rounded-lg md:w-64 md:h-95 xl:w-[500px] xl:h-[600px] about__image"
-                />
+                    <motion.img
+                        initial={{
+                            x: -200,
+                            opacity: 0,
+                        }}
+                        transition={{
+                            duration: 1.2,
+                        }}
+                        whileInView={{
+                            x: 0,
+                            opacity: 1,
+                        }}
+                        viewport={{
+                            once: true,
+                        }}
+                        src={urlFor(about[0]?.profilePic).url()}
+                        alt="Again Me :)"
+                        data-hover="Perfect thy art, and success shall smile upon thee. 😉"
+                        // data-hover="I know I'm camera-shy, but if you keep staring, I might just develop a permanent pose! 😐"
+                        onMouseEnter={imgHover}
+                        onMouseLeave={imgHoverLeave}
+                        className="-mb-20 md:mb-0 flex-shrink-0 w-[170px] h-[170px] rounded-full object-cover md:rounded-lg md:w-64 md:h-95 xl:w-[500px] xl:h-[600px] about__image"
+                    />
                 )}
             </div>
             <div className="mt-7 sm:mt-0 space-y-5 sm:space-y-10 px-0 md:px-10 inline-flex flex-col items-center md:inline-block">
                 <div className="flex flex-row justify-center items-center gap-2 about__small__image_div">
-                {about[0]?.profilePic && (
-                    <img
-                        src={urlFor(about[0]?.profilePic).url()}  
-                        alt="Again Me :)"
-                        data-hover="I know I'm camera-shy, but if you keep staring, I might just develop a permanent pose! 😐"
-                        onMouseEnter={imgHover} 
-                        onMouseLeave={imgHoverLeave}
-                        className="flex-shrink-0 w-[50px] h-[50px] rounded-full object-cover about__small_image"
-                    />
+                    {about[0]?.profilePic && (
+                        <img
+                            src={urlFor(about[0]?.profilePic).url()}
+                            alt="Again Me :)"
+                            data-hover="I know I'm camera-shy, but if you keep staring, I might just develop a permanent pose! 😐"
+                            onMouseEnter={imgHover}
+                            onMouseLeave={imgHoverLeave}
+                            className="flex-shrink-0 w-[50px] h-[50px] rounded-full object-cover about__small_image"
+                        />
                     )}
-                    <h4 className="text-2xl sm:text-3xl md:text-4xl font-semibold about__subheading">Here is a {" "}
-                        <span className="underline decoration-[#f26c4f]">little</span>
-                        {" "}background
+                    <h4 className="text-2xl sm:text-3xl md:text-4xl font-semibold about__subheading">
+                        Here is a{" "}
+                        <span className="underline decoration-[#f26c4f]">
+                            little
+                        </span>{" "}
+                        background
                     </h4>
                 </div>
                 {/* <p className="text-base">
@@ -85,18 +90,19 @@ export default function AboutContainer({ about, textLeave, linkEnter, imgHover, 
                     ))}
                 </p>
 
-
-                <button type="button"
+                <button
+                    type="button"
                     data-mdb-ripple="true"
                     data-mdb-ripple-color="light"
                     onMouseEnter={linkEnter}
                     onMouseLeave={textLeave}
                     onClick={rerouteToResume}
-                    className="rounded px-3 py-2 md:px-5 md:py-3 min-w-max overflow-hidden shadow relative bg-[color:var(--secondary-color)] text-white flex flex-row gap-x-2 justify-center items-center text-sm md:text-base">
+                    className="rounded px-3 py-2 md:px-5 md:py-3 min-w-max overflow-hidden shadow relative bg-[color:var(--secondary-color)] text-white flex flex-row gap-x-2 justify-center items-center text-sm md:text-base"
+                >
                     My story, my resume
-                    <FiArrowUpRight size='20' />
+                    <FiArrowUpRight size="20" />
                 </button>
             </div>
         </motion.div>
-    )
+    );
 }
