@@ -47,9 +47,9 @@ export default function Skills({
             transition={{ duration: 1.5 }}
             className="flex flex-col relative h-screen text-center md:text-left md:flex-row max-w-7xl px-0 sm:px-10 justify-evenly mx-auto items-center"
         >
-            <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-xl sm:text-2xl skill_section_title">
+            {/* <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-xl sm:text-2xl skill_section_title">
                 Skills & Experience
-            </h3>
+            </h3> */}
 
             {/* app__skills-container */}
             <div className="w-[80%] lg:w-[100%] space-y-0 sm:space-y-[3rem] flex flex-col lg:flex-row mt-20 sm:mt-0">
